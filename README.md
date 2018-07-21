@@ -1,17 +1,28 @@
 # react-code
-## 技术栈
+
+## 技术栈`````````````````
+
 ### react
+
 ### redux
+
 ### react-redux
+
 ### react-router-dom
+
 ### react-thunk
+
 ### react-app-rewired
+
 ### babel-plugin-import
+
 ### axios
+
 ### antd
 
 #### index.js
-```
+
+```jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
@@ -29,7 +40,8 @@ registerServiceWorker();
 ```
 
 #### App.js
-```
+
+```jsx
 import React, { Component } from 'react';
 import RouterIndex from './router/router';
 
@@ -45,7 +57,8 @@ export default App;
 ```
 
 #### router.js
-```
+
+```jsx
 import React,{ Component } from "react";
 import { Switch,Route,Redirect } from "react-router-dom";
 import Index from '../views/index/index';
