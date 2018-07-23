@@ -2,23 +2,10 @@
 
 ## 技术栈`````````````````
 
-### react
+```string
 
-### redux
-
-### react-redux
-
-### react-router-dom
-
-### react-thunk
-
-### react-app-rewired
-
-### babel-plugin-import
-
-### axios
-
-### antd
+react,redux,react-redux,react-router-dom,react-thunk,react-app-rewired,babel-plugin-import,axios,antd
+```
 
 #### index.js
 
@@ -42,17 +29,29 @@ registerServiceWorker();
 #### App.js
 
 ```jsx
+
 import React, { Component } from 'react';
 import RouterIndex from './router/router';
+import Header from './components/header';
+import Footer from './components/footer';
 
+import './assets/style/index.css'
 
-class App extends Component {
+export default class App extends Component {
 	render() {
-		return <RouterIndex />
+		return (
+			<div className="page-wrap">
+				<Header />
+				<div className="main">
+					<RouterIndex></RouterIndex>
+				</div>
+				<Footer />
+			</div>
+		)
 	}
 }
 
-export default App;
+
 
 ```
 
@@ -68,14 +67,14 @@ import User from '../views/user/index';
 import Details from '../views/details/index';
 
 
-class RouterIndex extends Component {
+export default class RouterIndex extends Component {
     render(){
         return (
             <Switch>
                 <Route path="/" exact render={() => (
-                    <Redirect to="/index" />
+                    <Redirect to="/index/all" />
                 )} />
-                <Route path="/index" component={Index} />
+                <Route path="/index/:id" component={Index} />
                 <Route path="/book" component={Book} />
                 <Route path="/about" component={About} />
                 <Route path="/user" component={User} />
@@ -85,5 +84,4 @@ class RouterIndex extends Component {
     }
 }
 
-export default RouterIndex;
 ```
