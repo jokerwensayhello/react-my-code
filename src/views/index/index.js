@@ -6,7 +6,7 @@ import List from './index_list';
 
 class Index extends Component {
     render(){
-        console.log(this.props.match.params.id)
+        // console.log(this.props.match.params.id)
         return (
             <Row className="wrap">
                 <Col md={6} xs={0}>
@@ -22,7 +22,7 @@ class Index extends Component {
                     />
                 </Col>
                 <Col md={18} xs={24} id="main-content">
-                    <List />
+                    <List ListCategory={this.props.match.params.id}/>
                 </Col>
 
             </Row>

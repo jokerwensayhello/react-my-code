@@ -6,11 +6,21 @@ import Tag from '../../components/text_tag';
 
 class Index extends Component {
     render(){
-        console.log(articleDate.data);
+        let articleDateCategory = [];
+        articleDate.data.forEach((item,index) => {
+            if(this.props.ListCategory === "all"){
+                articleDateCategory = articleDate.data;
+            }else{
+                if (item.tab === this.props.ListCategory){
+                    articleDateCategory.push(item);
+                }
+            }
+        });
+        
         return (
             <List
                 loading={false}
-                dataSource={articleDate.data}
+                dataSource={articleDateCategory}
                 renderItem={item => (<List.Item
                     actions={[
                         "回复："+item.reply_count,
@@ -19,7 +29,7 @@ class Index extends Component {
                 >
                     <List.Item.Meta
                         avatar={<Avatar src={item.author.avatar_url} />}
-                        title={<Link to={"/details/"+item.id}><Tag color="magenta" msg="置顶" />{item.title}</Link>}
+                        title={<Link to={"/details/"+item.id}><Tag itemInfo={item} />{item.title}</Link>}
                         description={
                             <p className="article-item-des">
                                 <Link to={"/user/"+item.author.loginname}>{item.author.loginname}</Link>
