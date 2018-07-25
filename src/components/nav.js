@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {Link} from "react-router-dom";
-import {Menu,Icon,Dropdown} from "antd";
+import {Menu,Icon} from "antd";
 
 export default class Nav extends Component {
     
@@ -9,7 +9,7 @@ export default class Nav extends Component {
         return (
             <Menu mode={mode} theme="light" id={id}>
                 <Menu.Item>
-                    <Link to="/index"><Icon type="home"></Icon>首页</Link>
+                    <Link to="/index/all"><Icon type="home"></Icon>首页</Link>
                 </Menu.Item>
                 <Menu.Item>
                     <Link to="/book"><Icon type="book"></Icon>教程</Link>

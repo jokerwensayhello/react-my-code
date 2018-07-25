@@ -1,9 +1,15 @@
 import React,{Component} from 'react';
+import ArticleDetials from "./article_details";
+import detailsData from "./data";
 
-class Details extends Component {
+export default class Details extends Component {
     render(){
-        return "详情"
+        const loading = false;
+        return (
+            <div className="wrap">
+                <ArticleDetials loading={loading} detailsData={detailsData} />
+            </div>
+            
+        )
     }
 }
-
-export default Details;

@@ -77,3 +77,11 @@
 .article-item-des{
     margin-bottom: 0;
 }
+
+.about-card img{
+    
+    width: 400px;
+    float: left;
+    margin: 20px;
+    border: 1px solid #eee;
+}

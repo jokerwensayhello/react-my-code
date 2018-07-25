@@ -1,6 +1,5 @@
 import React,{Component} from 'react';
-import {Link} from 'react-router-dom';
-import {Col,Row,Menu} from 'antd';
+import {Col,Row} from 'antd';
 import MainNav from '../../components/main_nav';
 import List from './index_list';
 
