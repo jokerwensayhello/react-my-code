@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import TextTag from "../../components/text_tag";
 
 
+
 export default class ArticleDetials extends Component {
     render() {
         const { loading, detailsData} = this.props;
@@ -20,6 +21,7 @@ export default class ArticleDetials extends Component {
                 </div>
             </div>
         )
+        
         return (
             <div>
                 <Card
