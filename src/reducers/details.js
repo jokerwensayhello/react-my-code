@@ -1,7 +1,8 @@
 
-export default details = (state = {}, action) => {
+function details (state = {}, action) {
     switch (action.type) {
         default:
             return state;
     }
 }
+export default details;

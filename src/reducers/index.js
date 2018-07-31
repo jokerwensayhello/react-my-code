@@ -3,9 +3,10 @@ import details from "./details";
 import list from "./list";
 import user from "./user";
 
-let reducer;
-export default reducer = combineReducers({
+
+let reducer = combineReducers({
     list,
     user,
     details
-})
+});
+export default reducer;

@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import {Link} from 'react-router-dom';
 import {List,Avatar} from 'antd';
+import { connect } from "react-redux";
 import articleDate from './data';
 import Tag from '../../components/text_tag';
 
@@ -10,12 +11,15 @@ class Index extends Component {
         articleDate.data.forEach((item,index) => {
             if(this.props.ListCategory === "all"){
                 articleDateCategory = articleDate.data;
+            }else if(this.props.ListCategory === "good" && item.good ){
+                articleDateCategory.push(item);
             }else{
                 if (item.tab === this.props.ListCategory){
                     articleDateCategory.push(item);
                 }
             }
         });
+        console.log(this.props);
         
         return (
             <List
@@ -45,4 +49,4 @@ class Index extends Component {
     }
 }
 
-export default Index;
+export default connect(state => state.list)(Index);
