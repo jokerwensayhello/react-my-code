@@ -6,6 +6,19 @@ import articleDate from './data';
 import Tag from '../../components/text_tag';
 
 class Index extends Component {
+    // constructor(){
+    //     super();
+    //     state: {
+    //         articleDate:"";
+    //         loading: "";
+    //     }
+    // }
+
+    // componentWillMount(){
+
+    // }
+
+
     render(){
         let articleDateCategory = [];
         articleDate.data.forEach((item,index) => {
@@ -20,7 +33,6 @@ class Index extends Component {
             }
         });
         console.log(this.props);
-        
         return (
             <List
                 loading={false}
@@ -43,7 +55,6 @@ class Index extends Component {
                     />
                 </List.Item>)}
             >
-
             </List>
         )
     }
