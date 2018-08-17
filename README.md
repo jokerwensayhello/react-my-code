@@ -85,3 +85,12 @@ export default class RouterIndex extends Component {
 }
 
 ```
+
+```html
+
+    <div class="get-quotation-broadcast flex-row-center">
+        <span class="broadcast-icon"></span>
+        <p class="gray">面积：82m2 张女士 预估预算：31479.20元</p>
+    </div>
+
+```
